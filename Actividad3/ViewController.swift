@@ -67,8 +67,18 @@ class ViewController: UIViewController {
         txtTotalCuentaChang(txtTotalCuenta)
         txtPorcPorpopChang(txtPorcPropop)
         if validador == true{
+            let cuenta: Float? = Float(txtTotalCuenta.text!)
+            let propina:  Float? = Float(txtPorcPropop.text!)
+            
+            let totalPropina = cuenta! * (0.01 * propina!)
+            let totalPagar: Float? = totalPropina + cuenta!
+            txvDesgloce.text = "Cuenta:           \(cuenta!)\nPropina:          \(propina!)%\nTotal Propina: \(totalPropina)\nTotal a Pagar: \(totalPagar!)"
             lblbtnError.text = ""
+            lblDesgloce.isHidden = false
+            txvDesgloce.isHidden = false
         }else{
+            lblDesgloce.isHidden = true
+            txvDesgloce.isHidden = true
             lblbtnError.text = "Falta validar informacion"
         }
     }
