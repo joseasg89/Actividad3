@@ -72,7 +72,7 @@ class ViewController: UIViewController {
             
             let totalPropina = cuenta! * (0.01 * propina!)
             let totalPagar: Float? = totalPropina + cuenta!
-            txvDesgloce.text = "Cuenta:           \(cuenta!)\nPropina:          \(propina!)%\nTotal Propina: \(totalPropina)\nTotal a Pagar: \(totalPagar!)"
+            txvDesgloce.text = "Cuenta:              \(cuenta!)\nPropina:             \(propina!)%\nTotal Propina:    \(totalPropina)\nTotal a Pagar:    \(totalPagar!)"
             lblbtnError.text = ""
             lblDesgloce.isHidden = false
             txvDesgloce.isHidden = false
